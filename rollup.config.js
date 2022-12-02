@@ -13,6 +13,7 @@ import replace from '@rollup/plugin-replace';
 import postcss from 'rollup-plugin-postcss';
 import external from 'rollup-plugin-peer-deps-external';
 import filesize from 'rollup-plugin-filesize';
+import nodeResolve from '@rollup/plugin-node-resolve';
 
 const globals = {
   react: 'React',
@@ -28,6 +29,7 @@ const baseConfig = format => ({
       ENVIRONMENT: JSON.stringify('production'),
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
+    nodeResolve(),
     external(),
     postcss({
       modules: false,
@@ -35,11 +37,24 @@ const baseConfig = format => ({
     }),
     url(),
     svgr(),
-    resolve(),
-    commonjs({
-      // use a regex to make sure to include eventual hoisted packages
-      include: format === 'umd' ? /\/node_modules\// : undefined
+    resolve({
+      browser: true,
+      dedupe: ['react', 'react-dom']
     }),
+    commonjs({
+      include: ['node_modules/**'],
+      exclude: ['node_modules/process-es6/**'],
+      namedExports: {
+        'node_modules/react/index.js': [
+          'Children',
+          'Component',
+          'PropTypes',
+          'createElement'
+        ],
+        'node_modules/react-dom/index.js': ['render']
+      }
+    }),
+    ,
     typescript(),
     json(),
     filesize()
@@ -71,5 +86,8 @@ const configs = [
   }
 ];
 
-const res = configs.map(config => ({ ...baseConfig(config.output[0].format), ...config }));
+const res = configs.map(config => ({
+  ...baseConfig(config.output[0].format),
+  ...config
+}));
 export default res;

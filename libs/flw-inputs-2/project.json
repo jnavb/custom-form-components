@@ -16,6 +16,7 @@
         "external": ["react/jsx-runtime"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
         "compiler": "babel",
+        "format": ["umd"],
         "assets": [
           {
             "glob": "libs/flw-inputs-2/README.md",

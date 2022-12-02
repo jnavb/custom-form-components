@@ -49,7 +49,7 @@
     "**/node_modules/*",
     "**/stories/*",
     "**/__tests__/*",
-    "**/*.test.ts*",
+    "**/*.test.ts*"
   ]
 
 

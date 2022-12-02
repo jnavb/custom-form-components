@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@custom-form-components/flw-inputs": ["libs/flw-inputs/src/index.ts"],
+      "custom-inputs-flw-": ["libs/flw-inputs-2/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

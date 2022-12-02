@@ -14,7 +14,7 @@
   "scripts": {
     "build": "rollup -c --environment production",
     "prebuild": "yarn && yarn build-clean-up",
-    "build-clean-up": "rimraf ./dist/packages/flowable-forms-custom"
+    "build-clean-up": "rm -rf ./dist/packages/flowable-forms-custom"
   },
   "devDependencies": {
     "@babel/helper-regex": "^7.10.5",

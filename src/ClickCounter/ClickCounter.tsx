@@ -6,6 +6,7 @@ export const ClickCounter = ({ config, payload, onChange }: any) => {
     setCount(count + 1);
     onChange(count * 2);
   }
+  console.log;
   return (
     <>
       <div className="flo-clickCounter" onClick={onClick}>

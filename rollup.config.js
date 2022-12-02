@@ -54,7 +54,6 @@ const baseConfig = format => ({
         'node_modules/react-dom/index.js': ['render']
       }
     }),
-    ,
     typescript(),
     json(),
     filesize()

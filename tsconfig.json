@@ -1,6 +1,28 @@
 {
-  "extends": "../../tsconfig.json",
+
   "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "lib": ["es6", "dom"],
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "sourceMap": true,
+    "declaration": true,
+    "removeComments": true,
+    "strict": false,
+    "incremental": false,
+    "strictFunctionTypes": false,
+    "importHelpers": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+
+
+
     "allowJs": false,
     "module": "esnext",
     "target": "ES2019",
@@ -8,6 +30,18 @@
     "downlevelIteration": true
   },
   "exclude": [
+    "dist/**/*",
+    "**/stories/*",
+    "**/node_modules/*",
+    "runtypes/**/*",
+    "**/*.test.*",
+    "**/*.spec.*",
+    "**/types",
+    "packages/flowable-web/apps/engage/embedded/lib/typings",
+    "packages/flowable-web/apps/engage/embedded/sample/**/*",
+    "packages/flowable-design-editor/src/sample/**/*",
+    "external/**/*",
+    "cypress/**/*",
     "build",
     "example",
     "rollup.config.js",
@@ -17,4 +51,6 @@
     "**/__tests__/*",
     "**/*.test.ts*"
   ]
+
+
 }

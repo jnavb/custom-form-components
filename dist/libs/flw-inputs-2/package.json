@@ -1,7 +1,9 @@
 {
   "name": "custom-inputs-flw-",
   "version": "0.0.1",
-  "type": "commonjs",
+  "module": "./index.js",
+  "main": "./index.js",
+  "type": "module",
   "types": "./index.d.ts",
   "dependencies": {},
   "peerDependencies": {

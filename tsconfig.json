@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "allowJs": false,
+    "module": "esnext",
+    "target": "ES2019",
+    "outDir": "dist",
+    "downlevelIteration": true
+  },
+  "exclude": [
+    "build",
+    "example",
+    "rollup.config.js",
+    "dist*/**/*",
+    "**/node_modules/*",
+    "**/stories/*",
+    "**/__tests__/*",
+    "**/*.test.ts*"
+  ]
+}

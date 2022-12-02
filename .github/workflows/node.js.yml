@@ -26,3 +26,8 @@ jobs:
         cache: 'npm'
     - run: yarn
     - run: yarn build
+    - name: Upload build
+      uses: actions/upload-artifact@v3
+      with:
+        name: custom-form-components
+        path: dist/index.js

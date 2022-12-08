@@ -23,12 +23,18 @@ jobs:
         cache: 'npm'
     - run: yarn
     - run: yarn build
-    - name: Upload build
+    - name: Upload js
       uses: actions/upload-artifact@v3
       with:
-        name: custom-form-components
+        name: index.js
         path: dist/index.js
+    - name: Upload styling
+      uses: actions/upload-artifact@v3
+      with:
+        name: index.css
+        path: dist/index.css
     - uses: actions/checkout@v2
     - uses: ncipollo/release-action@v1
       with:
+        tag: 1.0
         artifacts: "*.js,*.css"

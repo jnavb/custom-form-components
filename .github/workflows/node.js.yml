@@ -39,4 +39,4 @@ jobs:
     - uses: ncipollo/release-action@v1
       with:
         run: echo ls
-        artifacts: "./dist/index.js,./dist/index.min.css,index.js,index.min.css"
+        artifacts: "./dist/index.js"

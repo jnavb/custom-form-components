@@ -1,7 +1,6 @@
-//place forms css customizations here
-
-@font-face {
-    font-family: 'DancingScript';
-    src: url('./fonts/DancingScript/DancingScript-Regular.ttf') format('truetype');
-  }
-  
+.flw__label.flw__number__label {
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background: #e9e9ff;
+  padding: 6px 12px;
+}

@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { HelloWorld } from './HelloWorld/HelloWorld.tsx';
-import { MTV } from './MTV/MTV.tsx';
-import { IDCard } from './IDCard/IDCard.tsx';
+import { HelloWorld } from './HelloWorld/HelloWorld';
+import { MTV } from './MTV/MTV';
+import { IDCard } from './IDCard/IDCard';
 
 import './index.scss';
 
 export default {
-  'HelloWorld': HelloWorld,
-  'IDCard': IDCard,
-  'MTV': MTV,
+  HelloWorld,
+  IDCard,
+  MTV,
 } as Record<string, React.FC>;

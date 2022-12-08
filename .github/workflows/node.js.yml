@@ -3,9 +3,8 @@ name: Node.js CI
 
 on:
   push:
-    tags:
-    - '*'
-
+    branches:
+      - main
 
 jobs:
   build:
@@ -36,7 +35,11 @@ jobs:
       with:
         name: index.min.css
         path: dist/index.min.css
+    - uses: actions-ecosystem/action-push-tag@v1
+      with:
+        tag: ${{ steps.bump-semver.outputs.new_version }}
     - uses: ncipollo/release-action@v1
       with:
         run: echo ls
+        tag: ${{ steps.bump-semver.outputs.new_version }}
         artifacts: "./dist/index.js,./dist/index.min.css"

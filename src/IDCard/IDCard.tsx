@@ -7,8 +7,20 @@ export const IDCard = (props: FormComponentProps) => {
   return (
     <div>
       <span>Please introduce your ID Card</span>
-      <input placeholder="Letter" value={config.value} onChange={onChange} />
-      <input placeholder="9-Digits" value={config.value} onChange={onChange} />
+      <div style={{ display: 'flex' }}>
+        <input
+          style={{ border: '1px solid grey', marginRight: '6px' }}
+          placeholder="Letter"
+          value={config.value}
+          onChange={onChange}
+        />
+        <input
+          style={{ border: '1px solid grey' }}
+          placeholder="9-Digits"
+          value={config.value}
+          onChange={onChange}
+        />
+      </div>
     </div>
   );
 };

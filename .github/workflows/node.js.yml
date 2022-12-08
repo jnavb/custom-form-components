@@ -31,8 +31,8 @@ jobs:
     - name: Upload styling
       uses: actions/upload-artifact@v3
       with:
-        name: index.css
-        path: dist/index.css
+        name: index.min.css
+        path: dist/index.min.css
     - uses: actions/checkout@v2
     - uses: ncipollo/release-action@v1
       with:

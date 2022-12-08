@@ -1,11 +1,13 @@
 import React from 'react';
 
-import { ClickCounter2 } from './ClickCounter copy/ClickCounter';
-import { ClickCounter } from './ClickCounter/ClickCounter';
+import { HelloWorld } from './HelloWorld/HelloWorld.tsx';
+import { MTV } from './MTV/MTV.tsx';
+import { IDCard } from './IDCard/IDCard.tsx';
 
 import './index.scss';
 
 export default {
-  'click-counter': ClickCounter,
-  'click-counter-2': ClickCounter2,
+  'HelloWorld': HelloWorld,
+  'IDCard': IDCard,
+  'MTV': MTV,
 } as Record<string, React.FC>;

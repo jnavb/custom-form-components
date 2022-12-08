@@ -1,14 +1,47 @@
 import React from 'react';
-import { ComponentProps } from '../types/componentProps.d.ts';
+import { FormComponentProps } from 'src/formTypes';
 
-export const MTV = (props: ComponentProps) => {
+export const MTV = (props: FormComponentProps) => {
   const { config, payload, onChange } = props;
 
-
-    return <>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/eBGIQ7ZuuiU?controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/eBGIQ7ZuuiU?controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/eBGIQ7ZuuiU?controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/eBGIQ7ZuuiU?controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  return (
+    <>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/eBGIQ7ZuuiU?controls=0&autoplay=1"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/eBGIQ7ZuuiU?controls=0&autoplay=1"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/eBGIQ7ZuuiU?controls=0&autoplay=1"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/eBGIQ7ZuuiU?controls=0&autoplay=1"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
     </>
+  );
 };

@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { FormComponentProps } from 'src/formTypes';
 
-import { ComponentProps } from '../types/componentProps.d.ts';
-
-
-export const HelloWorld = ({ config, payload, onChange }: ComponentProps) => {
+export const HelloWorld = ({
+  config,
+  payload,
+  onChange,
+}: FormComponentProps) => {
   return <div>Hello World!</div>;
 };

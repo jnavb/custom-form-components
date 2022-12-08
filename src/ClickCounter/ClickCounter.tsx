@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
-export const ClickCounter = ({ config, payload, onChange }: any) => {
-  const [count, setCount] = useState(payload.count || 0);
+export const ClickCounter = (props: any) => {
+  const { config, payload, onChange } = props;
+  const [count, setCount] = React.useState(payload.count || 0);
   function onClick() {
     setCount(count + 1);
     onChange(count * 2);
@@ -9,10 +10,10 @@ export const ClickCounter = ({ config, payload, onChange }: any) => {
   console.log;
   return (
     <>
-      <div className="flo-clickCounter" onClick={onClick}>
+      <div className="flw-clickCounter" onClick={onClick}>
         {config.label || 'Count:'} <br />
       </div>
-      <div className="flo-clickCounterDebug">
+      <div className="flw-clickCounterDebug">
         Component State: {count} <br />
         config.value: {config.value} <br />
         Payload: {JSON.stringify(payload)}

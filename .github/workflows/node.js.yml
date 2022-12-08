@@ -36,8 +36,7 @@ jobs:
       with:
         name: index.min.css
         path: dist/index.min.css
-    - uses: actions/checkout@v2
     - uses: ncipollo/release-action@v1
       with:
         run: echo ls
-        artifacts: ${{ github.workspace }}/dist/index.js
+        artifacts: "./dist/index.js,./dist/index.min.css,index.js,index.min.css"

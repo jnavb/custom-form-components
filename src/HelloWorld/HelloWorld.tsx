@@ -6,5 +6,5 @@ export const HelloWorld = ({
   payload,
   onChange,
 }: FormComponentProps) => {
-  return <div>Hello World :)</div>;
+  return <div>Hello Flowable</div>;
 };
